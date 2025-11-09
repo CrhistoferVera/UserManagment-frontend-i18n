@@ -8,6 +8,7 @@ import { AuthProvider } from "./controlC/HU3/hooks/usoAutentificacion";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { notFound } from 'next/navigation';
+import { TranslationButton } from '@/i18n/TranslationButton';
 
 const messagesMap = {
   en: () => import('../../../messages/en.json'),
@@ -41,6 +42,7 @@ export default async function ControlCLayout({
             draggable
             theme="colored"
           />
+          <div className='text-black fixed bottom-7 right-7'><TranslationButton/></div>
         </AuthProvider>
         </NextIntlClientProvider>
       </body>
